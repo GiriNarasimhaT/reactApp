@@ -1,38 +1,114 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab:wght@400;600;700&display=swap');
+
+body{
+  background-color: #f4f7fc;
+  font-family: Inter,sans-serif;
+}
+
+.title{
+  margin-top: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul{
+  list-style: none;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color:white;
+  border-radius: 10px;
+  padding: 40px 10px;
+  box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 20%);
+}
+
+.basic-details{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+label{
+  font-size: small;
+  font-weight:bolder;
+}
+
+.card-item {
+  align-self: center;
+  width: 200px;
+}
+
+.details-btn{
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  border-radius: 20px;
+}
+
+.full-details{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px 40px;
+  box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 20%);
+}
+
+button{
+  background-color: #fb3e3e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:disabled{
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.prev-btn, .next-btn{
+  background-color: white;
+  color: unset;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For small screens: */
+  .basic-details{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .card-item{
+    width: unset;
+  }
+
+  .full-details{
+    grid-template-columns: auto;
+    overflow: hidden;
   }
 }
